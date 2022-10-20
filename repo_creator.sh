@@ -12,7 +12,7 @@ cd "$PWD"
 mkdir -p $REPONAME
 cd $REPONAME	
 git init
-touch readme.md	
+touch README.md	
 git add .
 git commit -m "init"
 git branch -m master main
