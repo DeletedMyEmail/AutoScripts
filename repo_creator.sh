@@ -5,6 +5,8 @@ REPONAME=$2
 TOKEN=$3
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
+py -m pip install --upgrade pip
+pip install PyGithub
 python $SCRIPTPATH/create_repo.py $REPONAME $TOKEN
 
 cd "$PWD"
