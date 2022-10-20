@@ -14,7 +14,7 @@ It takes the following arguments:
 - Repo name
 - Github token
 
-this what's going to happen:
+This what's going to happen:
 
 - new directory is created if it doesn't already exist
 - git repo is initialised
