@@ -7,7 +7,7 @@ def listen_for_updates():
     user = Github(sys.argv[1]).get_user()
     repo = user.get_repo("KMesRework")
     commit_counter = repo.totalCount
-    print(commit_counter)
+    os.system(f'bash update_kmes.sh {sys.argv[2]} {sys.argv[3]}')
     while (True)
         sleep(60 - time() % 60)
         if repo.totalCount > commit_counter:
