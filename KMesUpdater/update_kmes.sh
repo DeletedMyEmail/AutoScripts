@@ -8,9 +8,9 @@ PID=${PID%,*}
 
 kill $PID
 cd $1
-git pull https://github.com/KaitoKunTatsu/KMesRework.git
+git pull
 cd out/artifacts/KMesReworkServer/
 java -jar *.jar $2 &
 disown -h
 
-echo "KMes updated and restarted"
+echo "KMes Server updated and restarted"
