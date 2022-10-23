@@ -6,7 +6,7 @@ PROCESSOUTPUT=$(ss -tulpin | grep :4242)
 PID=${PROCESSOUTPUT#*pid=}
 PID=${PID%,*}
 
-kill $PID
+kill "$PID"
 cd $1
 git pull
 cd out/artifacts/KMesReworkServer/

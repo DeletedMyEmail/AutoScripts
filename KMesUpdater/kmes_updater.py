@@ -14,7 +14,7 @@ def listen_for_updates():
         if file.filename.startswith("KMesServer"):
             last_jar_name = file.filename
             break
-            0
+
     os.system(f'bash kmes_updater.sh {sys.argv[2]} {sys.argv[3]}')
 
     while (True):
