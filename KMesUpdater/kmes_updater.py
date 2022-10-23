@@ -7,7 +7,7 @@ from github import Github
 
 def listen_for_updates():
     g = Github()
-    repo = g.get_repo("KaitoKunTatsu/KMesRework")[0]
+    repo = g.get_repo("KaitoKunTatsu/KMesRework")
     last_jar_name = ""
     for file in repo.get_files():
         if file.filename.startswith("KMesServer"):
