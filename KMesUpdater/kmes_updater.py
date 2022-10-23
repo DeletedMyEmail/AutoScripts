@@ -10,7 +10,7 @@ def listen_for_updates():
     repo = g.get_repo("KaitoKunTatsu/KMesRework")
     last_commit_counter = repo.get_commits().__sizeof__()
 
-    os.system(f'bash kmes_updater.sh {sys.argv[2]} {sys.argv[3]}')
+    os.system(f'bash kmes_updater.sh {sys.argv[1]} {sys.argv[2]}')
 
     while (True):
         sleep(60)
