@@ -7,6 +7,7 @@ PID=${PROCESSOUTPUT#*pid=}
 PID=${PID%,*}
 
 kill "$PID"
+echo "Killed process with id $PID"
 cd $1
 git pull
 cd out/artifacts/KMesReworkServer/
