@@ -2,13 +2,12 @@
 # $1 = path to repo
 # $2 = port
 
-PROCESSTOKILL= sudo lsof -t -i:"$2"
-if [ ! -z "$PROCESSTOKILL" ]
+PROCESSTOKILL=$(sudo lsof -t -i:$2)
+if [[ -n "$PROCESSTOKILL" ]]
 then
 	kill -15 "$PROCESSTOKILL"
-	echo "Process killed"
+	echo "Process killed $PROCESSTOKILL"
 else 
-	echo "$PROCESSTOKILL"
 	echo "KMes not running"
 fi
 
