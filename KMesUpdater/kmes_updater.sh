@@ -2,12 +2,16 @@
 # $1 = path to repo
 # $2 = port
 
-PROCESSOUTPUT=$(ss -tulpin | grep :4242)
-PID=${PROCESSOUTPUT#*pid=}
-PID=${PID%,*}
+PROCESSTOKILL= sudo lsof -t -i:"$2"
+if [ ! -z "$PROCESSTOKILL" ]
+then
+	kill -15 "$PROCESSTOKILL"
+	echo "Process killed"
+else 
+	echo "$PROCESSTOKILL"
+	echo "KMes not running"
+fi
 
-kill "$PID"
-echo "Killed process with id $PID"
 cd $1
 git pull
 cd out/artifacts/KMesReworkServer/

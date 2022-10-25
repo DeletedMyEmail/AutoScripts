@@ -1,7 +1,6 @@
 import sys
 import os
 from time import sleep
-
 from github import Github
 
 
