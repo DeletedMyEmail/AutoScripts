@@ -14,7 +14,7 @@ def listen_for_updates():
     os.system(f'bash {path_to_this_dir}/kmes_updater.sh {path} {port}')
 
     while True:
-        sleep(60)
+        sleep(180)
         repo = g.get_repo("KaitoKunTatsu/KMesRework")
         print("Checking for updates...")
         if repo.get_commits().totalCount > last_commit_counter:
