@@ -31,4 +31,4 @@ It takes the following arguments:
 - Port on which the server runs
 
 This what's going to happen:
-- Fetches the kmes repo every 60sec => kills current process on port, pulls repo and restarts server 
+- Fetches the kmes repo every 3min => kills current process on port, pulls repo and restarts server 
