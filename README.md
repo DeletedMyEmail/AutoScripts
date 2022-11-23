@@ -11,8 +11,9 @@ Execute the [repo_creator](RepoCreator/repo_creator.sh) in the directory where y
 
 It takes the following arguments:
 - GitHub username
-- Repo name
 - Github token
+- Repo name
+- Visibility (public or private)
 
 This what's going to happen:
 
@@ -21,3 +22,12 @@ This what's going to happen:
 - repo is created on GitHub and added as remote,
 - readme file is created 
 - first commit is made.
+
+### Updating KMes Server
+Execute the [kmes_updater](KMesUpdater/kmes_updater.py) 
+
+It takes the following arguments:
+- Path to kmes repo
+- Port on which the server runs
+
+

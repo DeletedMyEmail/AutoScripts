@@ -1,13 +1,15 @@
 #!/bin/bash
 
 USERNAME=$1
-REPONAME=$2
-TOKEN=$3
+TOKEN=$2
+REPONAME=$3
+VISIBILITY=$4
+
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-py -m pip install --upgrade pip
+python -m pip install --upgrade pip 
 pip install PyGithub
-python $SCRIPTPATH/create_repo.py $REPONAME $TOKEN
+python $SCRIPTPATH/repo_creator.py $REPONAME $TOKEN $VISIBILITY
 
 cd "$PWD"
 
