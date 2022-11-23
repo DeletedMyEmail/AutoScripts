@@ -24,7 +24,7 @@ This what's going to happen:
 - first commit is made.
 
 ### Updating KMes Server
-Execute the [kmes_updater](KMesUpdater/kmes_updater.py) 
+Execute the [kmes_updater](KMesUpdater/kmes_updater.py)
 
 It takes the following arguments:
 - Path to kmes repo
