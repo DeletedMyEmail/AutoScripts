@@ -11,8 +11,8 @@ Execute the [repo_creator](RepoCreator/repo_creator.sh) in the directory where y
 
 It takes the following arguments:
 - GitHub username
-- Github token
 - Repo name
+- Github token
 - Visibility (public or private)
 
 This what's going to happen:
