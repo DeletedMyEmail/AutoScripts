@@ -1,8 +1,8 @@
 #!/bin/bash
 
 USERNAME=$1
-TOKEN=$2
-REPONAME=$3
+REPONAME=$2
+TOKEN=$3
 VISIBILITY=$4
 
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
