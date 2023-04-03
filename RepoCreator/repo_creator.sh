@@ -7,12 +7,13 @@ VISIBILITY=$4
 
 SCRIPTPATH="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
 
-python -m pip install --upgrade pip 
+sudo apt install python3
+sudo apt install python3-pip
+python3 -m pip install --upgrade pip 
 pip install PyGithub
-python $SCRIPTPATH/repo_creator.py $REPONAME $TOKEN $VISIBILITY
+python3 $SCRIPTPATH/repo_creator.py $REPONAME $TOKEN $VISIBILITY
 
 cd "$PWD"
-
 mkdir -p $REPONAME
 cd $REPONAME	
 git init

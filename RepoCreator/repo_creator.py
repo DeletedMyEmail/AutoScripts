@@ -6,9 +6,17 @@ def create_repo():
         repo_name: str = sys.argv[1]
         user = Github(sys.argv[2]).get_user()
         isPrivateRepo = sys.argv[3] == "private"
-        user.create_repo(repo_name, private=isPrivateRepo)
+    
+        if (user.get_repo(repo_name) != None):
+            print("-----------------------------")
+            print(f"Repo {repo_name} already exists")
+        else:
+            user.create_repo(repo_name, private=isPrivateRepo)
+            print("-----------------------------")
+            print(f"\nSuccessfully created and pushed repo: {repo_name}")
+    
     except Exception as error:
-        print("\nInvalid credentials, could not create repo")
+        print("\nCould not create repo")
         print(error)
 
 
